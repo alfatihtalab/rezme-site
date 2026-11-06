@@ -128,26 +128,17 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   margin: 8px 0 56px;
 }
-/* Google's official badge, transparent padding trimmed; the gap keeps its clear space. */
+/*
+ * The stores' official badges, unmodified (Google's with its transparent padding trimmed).
+ * Apple's rules: its badge comes first, and clear space is a quarter of the badge height,
+ * which the gap keeps.
+ */
 .store-badge { display: block; border-radius: 9px; }
 .store-badge img { display: block; width: auto; height: 56px; }
 .store-badge:focus-visible { outline: 2px solid var(--on-hero); outline-offset: 3px; }
-/* Not a link: Apple's badge may only point at an app that is on the App Store. */
-.store-soon {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 56px;
-  padding: 0 18px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 9px;
-  font: 500 19px/1.1 "Geist", system-ui, sans-serif;
-  color: var(--on-hero-muted);
-}
-.store-soon small { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
 .hero .shot {
   width: 100%;
   max-width: 340px;
@@ -176,9 +167,8 @@ h1, h2, h3 {
 
 @media (max-width: 760px) {
   .hero-inner { grid-template-columns: 1fr; padding-top: 40px; }
-  .stores { margin-bottom: 8px; gap: 10px; }
+  .stores { margin-bottom: 8px; gap: 12px; }
   .store-badge img { height: 48px; }
-  .store-soon { height: 48px; padding: 0 14px; font-size: 17px; }
   .hero .shot { max-width: 260px; }
   .features { grid-template-columns: 1fr; }
   .doc h1 { font-size: 30px; }
